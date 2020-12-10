@@ -6,6 +6,10 @@ const sendgridTransport = require('nodemailer-sendgrid-transport');
 const { validationResult } = require('express-validator/check');
 
 const User = require('../models/user');
+const Product = require('../models/product');
+const Order = require('../models/order');
+
+const DEFAULT_CHANNEL = "5fd153fbde698715c9dabe3b";
 
 const transporter = nodemailer.createTransport(
   sendgridTransport({
@@ -152,13 +156,24 @@ exports.postSignup = (req, res, next) => {
       return user.save();
     })
     .then(result => {
-      res.redirect('/login');
-      // return transporter.sendMail({
-      //   to: email,
-      //   from: 'shop@node-complete.com',
-      //   subject: 'Signup succeeded!',
-      //   html: '<h1>You successfully signed up!</h1>'
-      // });
+      const products = Product.findById(DEFAULT_CHANNEL).then(product=>{
+        const order = new Order({
+          user: {
+            email: email,
+            userId: result
+          },
+          products: { quantity: 1, product}
+        });
+         order.save();
+        }).then(result=>{
+
+          res.redirect('/login');
+        }).catch(err => {
+          const error = new Error(err);
+          error.httpStatusCode = 500;
+          return next(error);
+        });
+   
     })
     .catch(err => {
       const error = new Error(err);

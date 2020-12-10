@@ -4,6 +4,8 @@ const { validationResult } = require('express-validator/check');
 
 const Product = require('../models/product');
 
+const DEFAULT_CHANNEL = "5fd153fbde698715c9dabe3b";
+
 exports.getAddProduct = (req, res, next) => {
   res.render('admin/edit-product', {
     pageTitle: 'Add Product',
@@ -154,15 +156,18 @@ exports.postEditProduct = (req, res, next) => {
 };
 
 exports.getProducts = (req, res, next) => {
-  Product.find({ userId: req.user._id })
+  //Product.find({ userId: req.user._id })
+  Product.find()
     // .select('title price -_id')
     // .populate('userId', 'name')
     .then(products => {
       console.log(products);
       res.render('admin/products', {
         prods: products,
-        pageTitle: 'Admin Products',
-        path: '/admin/products'
+        pageTitle: 'Manage Channel',
+        path: '/admin/products',
+        defaultChannel: DEFAULT_CHANNEL
+
       });
     })
     .catch(err => {
