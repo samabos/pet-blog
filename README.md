@@ -21,8 +21,9 @@ Task:
 - NODEJS (Server Script)
 - Express JS (JS Framework)
 - EJS (templating engine)
-- Body Parser
 - MONGODB (DATABASE)
+- HTML5 
+- CSS
 
 ### Menu Structure
 - **Pet Blog** : displays list of blog channels available in the application
