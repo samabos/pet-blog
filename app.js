@@ -13,8 +13,7 @@ const flash = require('connect-flash');
 const errorController = require('./controllers/error');
 const User = require('./models/user');
 
-const MONGODB_URI =
-  'mongodb+srv://petblog:P3tb10g@cluster0.hrly7.mongodb.net/petblog';
+const MONGODB_URI = process.env.DB_CONNECTION_STRING;
 
 const app = express();
 const store = new MongoDBStore({
