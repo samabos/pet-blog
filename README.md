@@ -18,8 +18,10 @@ Task:
 
 ### Technology
 - NODEJS (Server Script)
-- Express JS
-- MONGODB FOR DATABASE
+- Express JS (JS Framework)
+- EJS (templating engine)
+- Body Parser
+- MONGODB (DATABASE)
 
 ### Menu Structure
 - Pet Blog : displays list of blog channels available in the application
@@ -30,7 +32,16 @@ Task:
 - Singup : User registration process
 
 ### Simple Business Process Flow
-- 
+- Goto https://samabos-petblog.herokuapp.com address on a web browser
+- Click on Signup to register
+- Enter a valid email and password and click on signup to continue
+- Login with your credentials 
+- User Dashboard is displayed on successfull login
+- Note you will be subscribed to Dog Blog by default and you can confirm this by checking My Channel Page
+- To subcribe to more pet blog channel goto Pet Blog Page and click on Subscribe 
+- Complete the checkout process and Voila! you are good to go.
+
+Thanks for the Challenge.
 
  
 
