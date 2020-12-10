@@ -36,10 +36,17 @@ Task:
 - Click on Signup to register
 - Enter a valid email and password and click on signup to continue
 - Login with your credentials 
-- User Dashboard is displayed on successfull login
-- Note you will be subscribed to Dog Blog by default and you can confirm this by checking My Channel Page
+- after Login on the User Dashboard. Note you will be subscribed to Dog Blog by default and you can confirm this by checking My Channel Page
 - To subcribe to more pet blog channel goto Pet Blog Page and click on Subscribe 
-- Complete the checkout process and Voila! you are good to go.
+- Complete the checkout process. Voila! you are good to go.
+
+
+### CHALLENGES
+Due to the short timeline some aspect needs code refactoring, the following are areas of inprovement.
+- Authorization was not fully implemented
+- unit test code coverage percentage is low
+- development and production enviroment variable need to be seperated
+- more code decoupling.
 
 Thanks for the Challenge.
 
