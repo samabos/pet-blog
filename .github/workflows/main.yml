@@ -10,10 +10,10 @@ jobs:
         uses: actions/npm@master
         with:
           args: install
-      - name: npm test
-        uses: actions/npm@master
-        with:
-          args: run test
+      #- name: npm test
+      #  uses: actions/npm@master
+      #  with:
+      #    args: run test
       - name: npm lint
         uses: actions/npm@master
         with:
