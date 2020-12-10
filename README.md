@@ -42,6 +42,15 @@ Task:
 - To subcribe to more pet blog channel goto Pet Blog Page and click on Subscribe 
 - Complete the checkout process. Voila! you are good to go.
 
+### Features
+- Responsive HTML5 Pages
+- Cart and Checkout Implementation
+- Form Validation Implementation
+- Authorization Implementation
+- Blog Channel Subscription Component
+- Blog Channel Service Order Component
+- Blog Channels Management 
+- Blog Channel Image implementation 
 
 ### Areas of Improvement
 Due to the short timeline some aspect needs improvement.
