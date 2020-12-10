@@ -42,12 +42,13 @@ Task:
 - Complete the checkout process. Voila! you are good to go.
 
 
-### CHALLENGES
-Due to the short timeline some aspect needs code refactoring, the following are areas of inprovement.
+### Areas of Improvement
+Due to the short timeline some aspect needs improvement.
 - Authorization was not fully implemented
-- unit test code coverage percentage is low
-- development and production enviroment variable need to be seperated
+- unit test code coverage percentage
+- development and production enviroment variable need to be seperated.
 - more code decoupling.
+- css styling could be improved.
 
 Thanks for the Challenge.
 
